@@ -50,9 +50,9 @@ def run():
     info( '*** Add links\\n')
     net.addLink(h1, r1)
     net.addLink(h2, r2)
+    net.addLink(r1, r2)
     net.addLink(r1, r3)
     net.addLink(r3, r2)
-    net.addLink(r1, r2)
 
     info( '*** Starting network\\n')
     net.start()
