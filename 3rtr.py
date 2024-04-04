@@ -25,7 +25,6 @@ class LinuxRouter( Node ):
         self.cmd('/usr/lib/frr/pimd -A 127.0.0.1 -f /etc/frr/frr.conf -d')
         self.cmd('/usr/lib/frr/pim6d -A ::1 -f /etc/frr/frr.conf -d')
         self.cmd('/usr/lib/frr/isisd -A 127.0.0.1 -f /etc/frr/frr.conf -d')
-        self.cmd('touch /etc/frr/vtysh.conf')
 
     def terminate( self ):
         self.cmd( 'killall zebra staticd ospfd ospf6d bgpd pathd pimd pim6d ldpd isisd nhrpd vrrpd fabricd' )
